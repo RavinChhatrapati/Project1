@@ -1,4 +1,4 @@
-class Best50Films2018::CLI
+"class Best50Films2018::CLI
 def run
   puts "Hello welcome to this project"
 html = open(https://www.thrillist.com/entertainment/nation/best-movies-of-2018)
