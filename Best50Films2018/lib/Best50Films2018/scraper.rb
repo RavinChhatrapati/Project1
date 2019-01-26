@@ -3,7 +3,8 @@ class Best50Films2018::Scraper
   def scrape_movie_info
     html = open(SITE)
   doc = Nokogiri::HTML(html)
-   puts doc.css("section.body-text.u-color--dark-gray.u-color--entertainment-links.font--body.has-mobile-padding.is-standard")[1..-2]
+  # puts doc.css("section.body-text.u-color--dark-gray.u-color--entertainment-links.font--body.has-mobile-padding.is-standard")[1..-2]
+ puts doc.css("h2.body-text__paragraph-header.font--h2").text
 binding.pry
 
 end
