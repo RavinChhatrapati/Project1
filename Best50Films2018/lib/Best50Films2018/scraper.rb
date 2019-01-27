@@ -7,13 +7,13 @@ class Best50Films2018::Scraper
   info = doc.css("section.body-text.u-color--dark-gray.u-color--entertainment-links.font--body.has-mobile-padding.is-standard")[1..-2]
   info.each do |movie_info|
 attributes =
-{title: movie_info.css("h2.body-text__paragraph-header.font--h2")
+{title: movie_info.css("h2.body-text__paragraph-header.font--h2").text
 
 }
 #title = doc.css("h2.body-text__paragraph-header.font--h2")
  #title.each do |movie_title|
 movie = Best50Films2018::Movie.new(attributes)
-  binding.pry
+
 end
 end
 
