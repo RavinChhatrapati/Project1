@@ -1,8 +1,8 @@
 class Best50Films2018::Movie
   @@all = []
-  attr_accessor :title
-  def initialize(title)
-    @title = title
+  attr_accessor :info
+  def initialize(info)
+    @info = info
     @@all << self
 
 end
