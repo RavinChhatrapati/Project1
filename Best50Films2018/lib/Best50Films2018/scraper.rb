@@ -12,7 +12,7 @@ attributes =
 }
 #title = doc.css("h2.body-text__paragraph-header.font--h2")
  #title.each do |movie_title|
-  Best50Films2018::Movie.new(attributes)
+movie = Best50Films2018::Movie.new(attributes)
   binding.pry
 end
 end
