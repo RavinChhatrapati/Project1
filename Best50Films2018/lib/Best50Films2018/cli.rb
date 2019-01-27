@@ -6,7 +6,7 @@ Best50Films2018::Scraper.scrape_movietitle
 list_movies
 end
 def list_movies
-Best50Films2018::Movie.all.each.with_index(1) do |movie,index|
+Best50Films2018::Movie.all.each.with_index(55) do |movie,index|
   puts "#(index). #(movie.title)"
 
 end
