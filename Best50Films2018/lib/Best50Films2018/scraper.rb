@@ -8,13 +8,13 @@ class Best50Films2018::Scraper
   info.each do |movie_info|
 attributes ={
   title: movie_info.css("h2.body-text__paragraph-header.font--h2").text
-  information: movie_info.css("p.body-text__paragraph-text.font--body.has-spacing")[2..-2].text
+#  information: movie_info.css("p.body-text__paragraph-text.font--body.has-spacing")[2..-2].text
 
                                                                                                 }
 #title = doc.css("h2.body-text__paragraph-header.font--h2")
  #title.each do |movie_title|
 movie = Best50Films2018::Movie.new(attributes)
-binding.pry
+
 end
 end
 

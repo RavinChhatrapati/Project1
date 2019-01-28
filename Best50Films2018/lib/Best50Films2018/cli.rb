@@ -3,12 +3,12 @@ def run
   puts "Hello welcome to this movie info application"
   puts "Welcome to the top 55 movies"
 Best50Films2018::Scraper.scrape_movieinfo
-list_movies
+list_movietitle
 end
 
-def list_movies
-Best50Films2018::Movie.all.each.with_index(55) do |movie,index|
-  puts "#(index). #(movie.title)"
+def list_movietitle
+Best50Films2018::Movie.all.each.with_index do |movie,i|
+  puts "#{i}. #{movie.title}"
 
 end
 end
