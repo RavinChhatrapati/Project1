@@ -14,6 +14,10 @@ end
 end
 def get_movie_method
   puts "Please select a movie you want more info about by selecting a number below"
-#input = gets.strip
+input = gets.strip
+if input.to_i.between?(1,55)
+else
+  get_movie_method
+end
 end
 end
