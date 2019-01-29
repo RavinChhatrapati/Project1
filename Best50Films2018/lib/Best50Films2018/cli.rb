@@ -19,6 +19,7 @@ input = gets.strip
 if input.to_i.between?(1,55)
   @listed_movies[index]
 else
+  puts "Sorry I do not understand that command. Please try again."
   get_movie_method
 end
 end
