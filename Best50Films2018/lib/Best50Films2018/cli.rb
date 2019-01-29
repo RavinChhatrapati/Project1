@@ -7,8 +7,8 @@ list_movietitle
 end
 
 def list_movietitle
-Best50Films2018::Movie.all.each.with_index do |movie,i|
-  puts "#{i}. #{movie.title}"
+Best50Films2018::Movie.all.each do |movie|
+  puts "#{movie.title}"
 
 end
 end
