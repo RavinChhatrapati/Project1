@@ -18,8 +18,8 @@ end
 
 def obtain_movie_method
 input = gets.strip
-index = input.to_i -1
-if index.between?(1,54)
+index = input.to_i - 1
+if index.between?(0,54)
 #binding.pry
   @listed_movies[index]
 else
