@@ -1,7 +1,7 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "Best50_Films_2018/version"
+require "Best50Films2018/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "Best50Films2018"
