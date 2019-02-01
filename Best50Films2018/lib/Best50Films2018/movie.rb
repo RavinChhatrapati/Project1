@@ -1,13 +1,18 @@
 class Best50Films2018::Movie
   @@all = []
-  attr_accessor :title, :information
+  attr_accessor :title, :released,:cast,:director,:why
   def initialize(att_hash)
     @title = att_hash[:title]
-    @information = att_hash[:information]
+    @released = att_hash[:released]
+    @cast = att_hash[:cast]
+    @director = att_hash[:director]
+    @why = att_hash[:why]
+
     @@all << self
 
 end
 def self.all
   @@all
+
 end
 end

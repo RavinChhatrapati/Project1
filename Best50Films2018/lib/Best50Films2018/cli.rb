@@ -20,8 +20,11 @@ def obtain_movie_method
 input = gets.strip
 index = input.to_i - 1
 if index.between?(0,54)
-#binding.pry
-  @listed_movies[index] #represents a movie
+movie =  @listed_movies[index] #represents a movie
+puts "#{movie.released}"
+puts "#{movie.cast}"
+puts "#{movie.director}"
+puts "#{movie.why}"
 else
   puts "Sorry that command is invalid. Please try again."
   obtain_movie_method
