@@ -6,8 +6,8 @@ require "Best50Films2018/version"
 Gem::Specification.new do |spec|
   spec.name          = "Best50Films2018"
   spec.version       = Best50Films2018::VERSION
-  spec.authors       = ["'Ravin Chhatrapati'"]
-  spec.email         = ["'ravinchhatrapati95@gmail.com'"]
+  spec.authors       = ["Ravin Chhatrapati"]
+  spec.email         = ["ravinchhatrapati95@gmail.com"]
 
   spec.summary       = "A gem that gives details about the top fifty - five best movies in 2018"
   spec.description   = "A gem that gives details about the top fifty - five best movies in 2018"
@@ -17,11 +17,11 @@ Gem::Specification.new do |spec|
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata["allowed_push_host"] = "https://rubygems.org
 
     spec.metadata["homepage_uri"] = spec.homepage
     spec.metadata["source_code_uri"] = "https://github.com/RavinChhatrapati/Project1"
-    spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+    spec.metadata["changelog_uri"] = "TODO:"https://github.com/RavinChhatrapati/Project1/tree/master/Best50Films2018"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
