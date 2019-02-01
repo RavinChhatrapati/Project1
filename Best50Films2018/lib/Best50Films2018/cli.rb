@@ -21,7 +21,7 @@ input = gets.strip
 index = input.to_i - 1
 if index.between?(0,54)
 #binding.pry
-  @listed_movies[index]
+  @listed_movies[index] #represents a movie
 else
   puts "Sorry that command is invalid. Please try again."
   obtain_movie_method

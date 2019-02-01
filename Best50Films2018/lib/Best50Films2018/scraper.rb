@@ -9,13 +9,25 @@ class Best50Films2018::Scraper
 
 attributes ={}
   attributes[:title] = movie_info.css("h2.body-text__paragraph-header.font--h2 em").text        # provides title of each movie
-movie_info.css("p.body-text__paragraph-text.font--body.has-spacing").each do |movie_details| # provides details of each movie
+ movie_info.css("p.body-text__paragraph-text.font--body.has-spacing").each do |movie_details| # provides details of each movie
 
-#attributes[:released] = movie_details.css("p.body-text__paragraph-text.font--body.has-spacing")[2..-2]
+separated_text = movie_details.text.split(/(?<=\d)(?=\p{L})|([a-z])([A-Z])/) #targts numbers that were conencted with letters
+binding.pry
+separated_text.each.with_index do |str, i|
 
+  if str.length == 1 && (i == 2 || i == 5)
+    separated_text[i-1] << str #add string to end of previous string
+    separated_text[i] = nil #replace string will nil to remove quickly later
+  elsif str.length == 1 && (i == 3 || i == 6)
+    separated_text[i+1].prepend(str) #add string to beginning of next string
+    separated_text[i] = nil #replace string will nil to remove quickly later
+  end
+end
+binding.pry
+separated_text.compact! #removes inserted nils
+separated_text.slice!(4..-1) #removes split text for strings with 'iTunes' or 'YouTube'
+#attributes[]:released] = movie_details.css("p.body-text__paragraph-text.font--body.has-spacing")[2..-2]
 
-#title = doc.css("h2.body-text__paragraph-header.font--h2")
- #title.each do |movie_title|
 movie = Best50Films2018::Movie.new(attributes)
 
 end
