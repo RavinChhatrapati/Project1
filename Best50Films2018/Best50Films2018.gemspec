@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
 
     spec.metadata["homepage_uri"] = "spec.homepage"
     spec.metadata["source_code_uri"] = "https://github.com/RavinChhatrapati/Project1"
-    spec.metadata["changelog_uri"] = https://github.com/RavinChhatrapati/Project1/tree/master/Best50Films2018"
+    spec.metadata["changelog_uri"] = "https://github.com/RavinChhatrapati/Project1/tree/master/Best50Films2018"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
@@ -40,5 +40,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "pry"
   spec.add_development_dependency "nokogiri"
-end
 end
