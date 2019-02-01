@@ -6,8 +6,8 @@ require "Best50Films2018/version"
 Gem::Specification.new do |spec|
   spec.name          = "Best50Films2018"
   spec.version       = Best50Films2018::VERSION
-  spec.authors       = ["Ravin Chhatrapati"]
-  spec.email         = ["ravinchhatrapati95@gmail.com"]
+  spec.authors       = ["'Ravin Chhatrapati'"]
+  spec.email         = ["'ravinchhatrapati95@gmail.com'"]
 
   spec.summary       = "A gem that gives details about the top fifty - five best movies in 2018"
   spec.description   = "A gem that gives details about the top fifty - five best movies in 2018"
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   if spec.respond_to?(:metadata)
     spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
-    spec.metadata["homepage_uri"] = "spec.homepage"
+    spec.metadata["homepage_uri"] = spec.homepage
     spec.metadata["source_code_uri"] = "https://github.com/RavinChhatrapati/Project1"
     spec.metadata["changelog_uri"] = "https://github.com/RavinChhatrapati/Project1/tree/master/Best50Films2018"
   else
@@ -39,5 +39,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "pry"
-  spec.add_development_dependency "nokogiri"
+  spec.add_dependency "nokogiri"
 end
