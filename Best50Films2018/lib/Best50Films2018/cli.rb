@@ -1,4 +1,4 @@
-class Best50Films2018::CLI
+1class Best50Films2018::CLI
 def run
   puts "Hello welcome to this movie info application"
   puts "Welcome to the top 55 movies"

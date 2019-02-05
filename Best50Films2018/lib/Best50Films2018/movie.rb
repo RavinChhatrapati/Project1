@@ -11,7 +11,7 @@ class Best50Films2018::Movie
     @@all << self
 
 end
-def self.all
+def self.all # class method
   @@all
 
 end
