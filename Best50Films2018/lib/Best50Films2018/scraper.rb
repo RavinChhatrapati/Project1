@@ -7,8 +7,8 @@ class Best50Films2018::Scraper
   info = doc.css("section.body-text.u-color--dark-gray.u-color--entertainment-links.font--body.has-mobile-padding.is-standard div.body-text__content")[1..-2]
    info.each do |movie_info|                       #provides title and information of each movie stored in hash
 
-attributes ={}
-  attributes[:title] = movie_info.css("h2.body-text__paragraph-header.font--h2 em").text        # provides title of each movie
+ movie = Best50Films2018::Movie.new
+movie.title = movie_info.css("h2.body-text__paragraph-header.font--h2 em").text        # provides title of each movie
  movie_info.css("p.body-text__paragraph-text.font--body.has-spacing").each do |movie_details| # provides details of each movie
 
  separated_text = movie_details.text.split(/(?<=\d)(?=\p{L})|([a-z])([A-Z])/) #targets numbers that were connected with letters
@@ -25,12 +25,12 @@ attributes ={}
  separated_text.slice!(4..-1)
 
 
- attributes[:released] = separated_text[0]
- attributes[:cast] = separated_text[1]
-  attributes[:director] = separated_text[2]
-  attributes[:why] = separated_text[3]
- movie = Best50Films2018::Movie.new(attributes)
-#
+ movie.released = separated_text[0]
+ movie.cast = separated_text[1]
+  movie.director = separated_text[2]
+  movie.why = separated_text[3]
+
+
  end
 end
 end

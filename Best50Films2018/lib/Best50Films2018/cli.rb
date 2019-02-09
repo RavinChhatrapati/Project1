@@ -1,33 +1,51 @@
-1class Best50Films2018::CLI
+class Best50Films2018::CLI
 def run
   puts "Hello welcome to this movie info application"
   puts "Welcome to the top 55 movies"
 
-Best50Films2018::Scraper.scrape_movieinfo
 list_movietitle
-puts "Please select a movie you want more info about by selecting a number below"
-obtain_movie_method
+menu
 end
 
 def list_movietitle
-@listed_movies = Best50Films2018::Movie.all.each.with_index(1) do |movie, index|
+Best50Films2018::Scraper.scrape_movieinfo
+Best50Films2018::Movie.all.each.with_index(1) do |movie, index|
+  if index <= 55
   puts "#{index}. #{movie.title}"
 
 end
 end
+puts ""
+end
 
-def obtain_movie_method
-input = gets.strip
-index = input.to_i - 1
-if index.between?(0,54)
-movie =  @listed_movies[index] #represents a movie
-puts "#{movie.released}"
-puts "#{movie.cast}"
-puts "#{movie.director}"
-puts "#{movie.why}"
-else
-  puts "Sorry that command is invalid. Please try again."
-  obtain_movie_method
+def print_movie_info(movie)
+  puts ""
+  puts "-----------------#{movie.title}-------------------"
+  puts ""
+  puts movie.released
+  puts ""
+  puts movie.cast
+  puts ""
+  puts movie.director
+  puts ""
+  puts movie.why
+  puts ""
 end
-end
+  def menu
+    input = nil
+    while input != "exit"
+      puts "Select which movie you would like to learn about by typing number."
+      puts "Type menu to see the list of movies again, or type exit to end the program."
+      input = gets.strip.downcase
+      if input.to_i > 0
+        if movie = Best50Films2018::Movie.find(input.to_i)
+           print_movie_info(movie)
+        end
+      elsif input == "menu"
+        list_movietitle
+      else
+        puts "Not sure what you want? Type menu or exit." unless input == "exit"
+      end
+    end
+  end
 end
