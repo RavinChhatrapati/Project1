@@ -1,7 +1,7 @@
 class Best50Films2018::CLI
 def run
   puts "Hello welcome to this movie info application"
-  puts "Welcome to the top 55 movies"
+  puts "Welcome to the top 57 movies"
 
 list_movietitle
 menu
@@ -10,21 +10,19 @@ end
 def list_movietitle
 Best50Films2018::Scraper.scrape_movieinfo
 Best50Films2018::Movie.all.each.with_index(1) do |movie, index|
-  if index <= 55
+if index <= 57
   puts "#{index}. #{movie.title}"
-
+end
 end
 end
 puts ""
-end
+
 
 def print_movie_info(movie)
   puts ""
   puts "-----------------#{movie.title}-------------------"
   puts ""
   puts movie.released
-  puts ""
-  puts movie.cast
   puts ""
   puts movie.director
   puts ""
