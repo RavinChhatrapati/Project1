@@ -29,14 +29,15 @@ def print_movie_info(movie)
   puts movie.why
   puts ""
 end
+
   def menu
     input = nil
     while input != "exit"
       puts "Select which movie you would like to learn about by typing number."
       puts "Type menu to see the list of movies again, or type exit to end the program."
-      input = gets.strip.downcase
+      input = gets.strip
       if input.to_i > 0
-        if movie = Best50Films2018::Movie.find(input.to_i)
+        if  movie = Best50Films2018::Movie.find(input.to_i)
            print_movie_info(movie)
         end
       elsif input == "menu"
