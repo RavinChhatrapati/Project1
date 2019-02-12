@@ -35,9 +35,9 @@ end
     while input != "exit"
       puts "Select which movie you would like to learn about by typing number."
       puts "Type menu to see the list of movies again, or type exit to end the program."
-      input = gets.strip
-      if input.to_i > 0
-        if  movie = Best50Films2018::Movie.find(input.to_i)
+      input = gets.strip  # Takes users input and provides access to my code> Code is getting access to users input
+      if input.to_i > 0  # Returns true or false, serves as Boolean data
+        if  movie = Best50Films2018::Movie.find(input.to_i) #outputs information for selected movie, based off input ( movie number)
            print_movie_info(movie)
         end
       elsif input == "menu"
