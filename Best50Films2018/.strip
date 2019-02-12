@@ -1,0 +1,23 @@
+
+[1mFrom:[0m /home/empathetic-file-5230/temporary/Project1/Best50Films2018/lib/Best50Films2018/cli.rb @ line 39 Best50Films2018::CLI#menu:
+
+    [1;34m33[0m: [32mdef[0m [1;34mmenu[0m
+    [1;34m34[0m:   input = [1;36mnil[0m
+    [1;34m35[0m:   [32mwhile[0m input != [31m[1;31m"[0m[31mexit[1;31m"[0m[31m[0m
+    [1;34m36[0m:     puts [31m[1;31m"[0m[31mSelect which movie you would like to learn about by typing number.[1;31m"[0m[31m[0m
+    [1;34m37[0m:     puts [31m[1;31m"[0m[31mType menu to see the list of movies again, or type exit to end the program.[1;31m"[0m[31m[0m
+    [1;34m38[0m:     input = gets.strip  [1;34m# Takes users input and provides access to my code> Code is getting access to users input[0m
+ => [1;34m39[0m:     binding.pry
+    [1;34m40[0m:     [32mif[0m input.to_i > [1;34m0[0m  [1;34m# Returns true or false, serves as Boolean data[0m
+    [1;34m41[0m:       [32mif[0m  movie = [1;34;4mBest50Films2018[0m::[1;34;4mMovie[0m.find(input.to_i) [1;34m#outputs information for selected movie, based off input ( movie number)[0m
+    [1;34m42[0m:          print_movie_info(movie)  [1;34m#>> Returns nil. Prints out all the information within the method print_movie_info(movie)[0m
+    [1;34m43[0m:       [32mend[0m
+    [1;34m44[0m:     [32melsif[0m input == [31m[1;31m"[0m[31mmenu[1;31m"[0m[31m[0m
+    [1;34m45[0m: 
+    [1;34m46[0m:       list_movietitle
+    [1;34m47[0m:     [32melse[0m
+    [1;34m48[0m:       puts [31m[1;31m"[0m[31mNot sure what you want? Type menu or exit.[1;31m"[0m[31m[0m [32munless[0m input == [31m[1;31m"[0m[31mexit[1;31m"[0m[31m[0m
+    [1;34m49[0m:     [32mend[0m
+    [1;34m50[0m:   [32mend[0m
+    [1;34m51[0m: [32mend[0m
+
